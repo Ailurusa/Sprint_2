@@ -6,7 +6,8 @@ class Movies:
 
     def add_movie(self, movie):
         self.movies.append(movie)
-        return f'{self.genre}: {self.movies}'
+        if self.__class__.__name__ != 'Movies':
+            return f'{self.genre}: {self.movies}'
 
 
 class Comedy(Movies):
